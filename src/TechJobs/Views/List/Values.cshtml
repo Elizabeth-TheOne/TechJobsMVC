@@ -4,7 +4,9 @@
 @for (int i= 0; i < ViewBag.items.Count; i++)
 {
     <tr class="@( i % 2 == 0 ? "even" : "odd" ) ">
+        <th>
         <td><a asp-controller="List" asp-action="Jobs" asp-route-column="@ViewBag.column" asp-route-value="@ViewBag.items[i]">@ViewBag.items[i]</a></td>
+        </th>
     </tr>  
 }   
 </table>
